@@ -23,7 +23,7 @@ public class Client
 	
 	public String getNom()
 	{
-		return null;
+		return this.nom;
 	}
 	
 	/**
@@ -33,6 +33,7 @@ public class Client
 	
 	public void setNom(String nom)
 	{
+		this.nom = nom;
 	}
 	
 	/**
