@@ -1,5 +1,6 @@
 package metier;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,6 +47,9 @@ public class Client
 	{	
 		Facture f = new Facture();
 		f.montant = montant;
+		f.date = LocalDate.now();
+		f.estReglee = false;
+		f.client = this;
 		return f;
 	}
 	
