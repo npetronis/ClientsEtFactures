@@ -26,6 +26,7 @@ public class Client
 	public String getNom()
 	{
 		return this.nom;
+		
 	}
 	
 	/**
@@ -36,9 +37,10 @@ public class Client
 	public void setNom(String nom)
 	{
 		this.nom = nom;
+	
 	}
 	
-	/**
+	/** 
 	 * Créé une facture.
 	 * @param montant Le montant de la facture.
 	 * @return la facture créée.
