@@ -49,11 +49,11 @@ public class Client
 	public Facture createFacture(int montant)
 	{
 		Facture f = new Facture();
-		f.montant = montant;
-		f.date = LocalDate.now();
-		f.estReglee = false;
-		f.client = this;
-		return f;
+    	f.setMontant(montant);
+    	f.setDate(LocalDate.now());
+    	f.setEstReglee(false);
+    	f.setClient(this);
+    	return f;
 	}
 	
 	/**
@@ -62,8 +62,17 @@ public class Client
 	 */
 
 	public List<Facture> getFactures()
-	{
-		return null;
+	{	
+		List<Facture> l = new ArrayList<Facture>();
+
+		Facture f = new Facture();
+
+		//f.createFacture(f.getMontant());
+
+		for(int i = 0; i <= l.size(); i++)
+			l.add(f);
+
+		return l;
 	}
 	
 	/**
@@ -84,8 +93,12 @@ public class Client
 	 */
 	
 	public Facture createFacture(int montant, boolean reglee)
-	{
-		return null;
+	{   Facture f = new Facture();
+		f.setMontant(montant);
+    	f.setDate(LocalDate.now());
+    	f.setEstReglee(reglee);
+    	f.setClient(this);
+		return f;
 	}	
 	
 	/**
