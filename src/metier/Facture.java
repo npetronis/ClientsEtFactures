@@ -2,8 +2,13 @@ package metier;
 
 import java.time.LocalDate;
 
+
 public class Facture
 {
+	int montant;
+	LocalDate date;
+	boolean estReglee;
+	Client client;
 	/**
 	 * Retourne le client à qui est adressée la facture..
 	 * @return le client.
