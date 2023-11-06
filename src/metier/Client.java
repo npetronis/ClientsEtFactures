@@ -1,10 +1,13 @@
 package metier;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Client
 {
+	String nom;
+
 	/** 
 	 * Crée un client.
 	 * @param nom le nom du client. 
@@ -12,6 +15,7 @@ public class Client
 	
 	public Client(String nom)
 	{
+		this.nom = nom;
 	}
 
 	/**
@@ -21,7 +25,8 @@ public class Client
 	
 	public String getNom()
 	{
-		return null;
+		return this.nom;
+		
 	}
 	
 	/**
@@ -31,9 +36,11 @@ public class Client
 	
 	public void setNom(String nom)
 	{
+		this.nom = nom;
+	
 	}
 	
-	/**
+	/** 
 	 * Créé une facture.
 	 * @param montant Le montant de la facture.
 	 * @return la facture créée.
@@ -41,7 +48,12 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		return null;
+		Facture f = new Facture();
+    	f.setMontant(montant);
+    	f.setDate(LocalDate.now());
+    	f.setEstReglee(false);
+    	f.setClient(this);
+    	return f;
 	}
 	
 	/**
@@ -50,8 +62,17 @@ public class Client
 	 */
 
 	public List<Facture> getFactures()
-	{
-		return null;
+	{	
+		List<Facture> l = new ArrayList<Facture>();
+
+		Facture f = new Facture();
+
+		//f.createFacture(f.getMontant());
+
+		for(int i = 0; i <= l.size(); i++)
+			l.add(f);
+
+		return l;
 	}
 	
 	/**
@@ -72,8 +93,12 @@ public class Client
 	 */
 	
 	public Facture createFacture(int montant, boolean reglee)
-	{
-		return null;
+	{   Facture f = new Facture();
+		f.setMontant(montant);
+    	f.setDate(LocalDate.now());
+    	f.setEstReglee(reglee);
+    	f.setClient(this);
+		return f;
 	}	
 	
 	/**
