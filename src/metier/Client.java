@@ -63,16 +63,16 @@ public class Client
 
 	public List<Facture> getFactures()
 	{	
-		List<Facture> l = new ArrayList<Facture>();
+		/*List<Facture> l = new ArrayList<Facture>();
 
 		Facture f = new Facture();
 
 		//f.createFacture(f.getMontant());
 
 		for(int i = 0; i <= l.size(); i++)
-			l.add(f);
+			l.add(f);*/
 
-		return l;
+		return null;
 	}
 	
 	/**
