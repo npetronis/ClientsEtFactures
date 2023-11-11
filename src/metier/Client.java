@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Client
 {
+	String nom;
 	/** 
 	 * Crée un client.
 	 * @param nom le nom du client. 
@@ -12,6 +13,7 @@ public class Client
 	
 	public Client(String nom)
 	{
+		this.nom = nom;
 	}
 
 	/**
@@ -21,7 +23,7 @@ public class Client
 	
 	public String getNom()
 	{
-		return null;
+		return this.nom;
 	}
 	
 	/**
@@ -31,6 +33,7 @@ public class Client
 	
 	public void setNom(String nom)
 	{
+		this.nom = nom;
 	}
 	
 	/**
@@ -41,7 +44,12 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		return null;
+		Facture f = new Facture();
+    	f.setMontant(montant);
+    	f.setDate(LocalDate.now());
+    	f.setEstReglee(false);
+    	f.setClient(this);
+    	return f;
 	}
 	
 	/**
@@ -73,7 +81,12 @@ public class Client
 	
 	public Facture createFacture(int montant, boolean reglee)
 	{
-		return null;
+		Facture f = new Facture();
+		f.setMontant(montant);
+    	f.setDate(LocalDate.now());
+    	f.setEstReglee(reglee);
+    	f.setClient(this);
+		return f;
 	}	
 	
 	/**
