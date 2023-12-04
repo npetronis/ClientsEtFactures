@@ -17,7 +17,7 @@ public class Facture
 	 * @return le client.
 	 */
 	
-	public Facture(int montant) throws factureexception
+	public Facture(int montant, LocalDate date, boolean estReglee, Client client) throws factureexception
 	{
 		if(montant > 0)
 			this.montant = montant;
