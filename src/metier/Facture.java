@@ -90,7 +90,7 @@ public class Facture
 		if(montant > 0)
 			this.montant = montant;
 		else
-			throw new factureexception;
+			throw new factureexception();
 	}
 
 	public void setDate(LocalDate date)
