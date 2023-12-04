@@ -21,6 +21,9 @@ public class Facture
 	{
 		if(montant > 0)
 			this.montant = montant;
+			this.date = date;
+			this.estReglee = estReglee;
+			this.client = client;
 		else
 			throw new factureexception();
 	}
