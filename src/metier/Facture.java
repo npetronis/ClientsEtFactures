@@ -85,9 +85,12 @@ public class Facture
 
 
 	//setters
-	public void setMontant(int montant)
-	{
-		this.montant = montant;
+	public void setMontant(int montant) throws factureexception
+	{	
+		if(montant > 0)
+			this.montant = montant;
+		else
+			throw new factureexception;
 	}
 
 	public void setDate(LocalDate date)
