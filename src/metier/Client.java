@@ -45,7 +45,7 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		Facture f = new Facture(montant);
+		Facture f = new Facture();
     	f.setMontant(montant);
     	f.setDate(LocalDate.now());
     	f.setEstReglee(false);
@@ -82,7 +82,7 @@ public class Client
 	
 	public Facture createFacture(int montant, boolean reglee)
 	{
-		Facture f = new Facture(montant);
+		Facture f = new Facture();
 		f.setMontant(montant);
     	f.setDate(LocalDate.now());
     	f.setEstReglee(reglee);

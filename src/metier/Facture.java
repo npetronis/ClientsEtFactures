@@ -24,6 +24,10 @@ public class Facture
 		else
 			throw new factureexception();
 	}
+	public Facture() 
+	{
+		this.montant = montant;
+	}
 	
 	public Client getClient()
 	{
