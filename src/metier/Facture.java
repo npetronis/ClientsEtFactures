@@ -24,6 +24,7 @@ public class Facture
 		else
 			throw new factureexception();
 	}
+	
 	public Client getClient()
 	{
 		return this.client;
@@ -104,9 +105,10 @@ public class Facture
 		return this.facture = facture;
 	}
 	
-	class factureexception extends java.lang.IllegalArgumentException
-	{
-		@override
-			public string getMessage("Le montant d'une facture ne peut pas être négatif.");
-	}
+	
+}
+class factureexception extends java.lang.IllegalArgumentException
+{
+	@override
+		public string getMessage("Le montant d'une facture ne peut pas être négatif.");
 }
