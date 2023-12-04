@@ -110,7 +110,7 @@ public class Facture
 class factureexception extends java.lang.IllegalArgumentException
 {
 	@override
-		public string getMessage()
+		public String getMessage()
 		{
 			return "Le montant d'une facture ne peut pas être négatif.";
 		}
