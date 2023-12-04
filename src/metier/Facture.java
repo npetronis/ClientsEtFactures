@@ -10,13 +10,20 @@ public class Facture
 	private boolean estReglee;
 	private Client client;
 
-
+	private Facture facture;
 
 	/**
 	 * Retourne le client à qui est adressée la facture..
 	 * @return le client.
 	 */
 	
+	public Facture(int montant) throws factureexception
+	{
+		if(montant > 0)
+			this.montant = montant;
+		else
+			throw new factureexception();
+	}
 	public Client getClient()
 	{
 		return this.client;
@@ -91,5 +98,15 @@ public class Facture
 	public void setClient(Client client)
 	{
 		this.client = client;
+	}
+	public Facture getFacture(Facture facture)
+	{
+		return this.facture = facture;
+	}
+	
+	class factureexception extends java.lang.IllegalArgumentException
+	{
+		@override
+			public string getMessage("Le montant d'une facture ne peut pas être négatif.");
 	}
 }
