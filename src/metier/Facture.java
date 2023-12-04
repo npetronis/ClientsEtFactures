@@ -20,10 +20,12 @@ public class Facture
 	public Facture(int montant, LocalDate date, boolean estReglee, Client client) throws factureexception
 	{
 		if(montant > 0)
+		{
 			this.montant = montant;
 			this.date = date;
 			this.estReglee = estReglee;
 			this.client = client;
+		}
 		else
 			throw new factureexception();
 	}
