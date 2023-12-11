@@ -68,9 +68,11 @@ public class Client
 	
 	public int sommeMontants()
 	{
-	    for (Facture facture : factures) { 
+	    int somme = 0;
+	    for (Facture facture : factures) 
 	        somme += facture.getMontant();
 	    return somme;
+	
 	}
 
 	/**
