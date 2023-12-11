@@ -12,6 +12,8 @@ public class Client
 	 * @param nom le nom du client. 
 	 */
 	
+    private List<Facture> factures;
+	
 	public Client(String nom)
 	{
 		this.nom = nom;
@@ -46,11 +48,7 @@ public class Client
 	public Facture createFacture(int montant)
 	{
 		Facture f = new Facture(montant, LocalDate.now(),false,this);
-//		Facture f = new Facture();
-//    	f.setMontant(montant);
-//    	f.setDate(LocalDate.now());
-//    	f.setEstReglee(false);
-//    	f.setClient(this);
+        factures.add(f);
     	return f;
 	}
 	
@@ -84,12 +82,7 @@ public class Client
 	public Facture createFacture(int montant, boolean reglee)
 	{	
 		Facture f = new Facture(montant, LocalDate.now(),reglee,this);
-
-		/*Facture f = new Facture();
-		f.setMontant(montant);
-    	f.setDate(LocalDate.now());
-    	f.setEstReglee(reglee);
-    	f.setClient(this);*/
+        factures.add(f);
 		return f;
 	}	
 	
