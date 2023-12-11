@@ -116,7 +116,8 @@ public class Client
 	 */
 	public static List<Client> tous()
 	{
-        return new ArrayList<>(clients);
+       // return new ArrayList<>(clients);
+		return null;
 	}
 	
 	/**
