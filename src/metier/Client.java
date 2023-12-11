@@ -7,12 +7,11 @@ import java.time.LocalDate;
 public class Client
 {
 	String nom;
+	private List<Facture> factures;
 	/** 
 	 * Crée un client.
 	 * @param nom le nom du client. 
 	 */
-	
-    
 	
 	public Client(String nom)
 	{
@@ -48,7 +47,7 @@ public class Client
 	public Facture createFacture(int montant)
 	{
 		Facture f = new Facture(montant, LocalDate.now(),false,this);
-     
+        factures.add(f);
     	return f;
 	}
 	
@@ -82,7 +81,7 @@ public class Client
 	public Facture createFacture(int montant, boolean reglee)
 	{	
 		Facture f = new Facture(montant, LocalDate.now(),reglee,this);
-  
+        factures.add(f);
 		return f;
 	}	
 	

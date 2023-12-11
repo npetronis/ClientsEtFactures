@@ -10,7 +10,6 @@ public class Facture
 	private boolean estReglee;
 	private Client client;
 		
-    Facture factures = new ArrayList();
 
 	private Facture facture;
 
